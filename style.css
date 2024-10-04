@@ -1,0 +1,30 @@
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+#item{
+    align-items: center;
+    background-color: bisque;
+    margin: 20px;
+    height: 50px;
+    width: 200px;
+}
+img {
+    width: 200px;
+    margin: 20px;
+}
+
+button{
+    border-radius: 30px;
+    width: 100px;
+    margin: 20px;
+}
+
+footer{
+    display:  flex;
+    align-items: center;
+    background-color:cornflowerblue;
+    height: 50px;
+    justify-content: center;
+}
