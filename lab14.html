@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="user">
+            Phiphop thong-aun
+        </h1>
+        <div class="profile" id="profile">
+            <div id="img" class="img"></div>
+            <div class="notify"><p>1</p></div>
+        </div>
+        <div class="container">
+            <div class="flex-container">
+                    <p>Set the Username</p>
+                    <input type="text" id="name">
+                    <button onclick="setName()">SET</button>
+            </div>
+            <div class="flex-container">
+                <p>set the profile image URL</p>
+                <input type="text" id="picname">
+                <button onclick="setImg()">SET</button>
+            </div>
+            <div>
+                <h1>Phone number list</h1>
+            </div>
+            <div class="flex-container">
+                <input type="text" id="name">
+                <input type="text" id="name">
+                <button onclick="setParagraph()">ADD</button>
+                <button onclick="setName()">EXPORT</button>
+            </div>
+          </div>
+
+          <table style="width:50%">
+            <tr>
+              <th>No.</th>
+              <th>Name</th>
+              <th>Phone number</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>add</td>
+              <td>088</td>
+            </tr>
+          </table>
+    </div>
+
+    <script>
+        const username = document.getElementById("user");
+        const input = document.getElementById("name")
+        const picture = document.getElementById("picname")
+        const profile = document.getElementById("img")
+        const newdiv = document.getElementsByClassName("container")[0]
+
+        function setName(){
+            username.textContent = input.value;
+        }
+
+        function setImg(){
+            profile.style.backgroundImage() = "url(" + picture.value +")";
+        }
+
+        function setParagraph(){
+            const newpara = document.createElement("tr");
+            newpara.textContent = input.value;
+            newdiv.appendChild(newpara);
+        }
+    </script>
+</body>
+</html>
