@@ -47,3 +47,45 @@
 table, th, td {
     border:1px solid black;
 }
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+.container {
+    margin-bottom: 20px;
+}
+.flex-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.flex-container input {
+    margin-right: 10px;
+}
+#table {
+    border-collapse: collapse;
+    width: 100%;
+}
+#table th, #table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+#table th {
+    background-color: #f2f2f2;
+}
+.img {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 10px;
+}
+#user {
+    cursor: pointer;
+    text-decoration: none;
+    color: black; /* Default color */
+}
+#user:hover {
+    color: blue; /* Change text color on hover */
+    text-decoration: underline; /* Underline on hover */
+}

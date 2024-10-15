@@ -5,45 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Profile</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        .container {
-            margin-bottom: 20px;
-        }
-        .flex-container {
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-        .flex-container input {
-            margin-right: 10px;
-        }
-        #table {
-            border-collapse: collapse;
-            width: 100%;
-        }
-        #table th, #table td {
-            border: 1px solid #ddd;
-            padding: 8px;
-        }
-        #table th {
-            background-color: #f2f2f2;
-        }
-        .img {
-            width: 100px;
-            height: 100px;
-            background-size: cover;
-            background-position: center;
-            margin-bottom: 10px;
-        }
-    </style>
 </head>
 <body>
     <div class="container">
-        <h1 id="user">Phiphop Thong-aun</h1>
+        <h1>
+            <a id="user" href="https://github.com/Alakok77" target="_blank">Phiphop Thong-aun</a>
+        </h1>
         <div class="profile" id="profile">
             <div id="img" class="img"></div>
             <div class="notify"><p>1</p></div>
@@ -81,8 +48,8 @@
     </div>
 
     <script>
-        let count = 0;  // To keep track of row numbers
-        const phonenumber = [];  // Array to store phone numbers
+        let count = 0;
+        const phonenumber = [];
 
         function setName() {
             const input = document.getElementById("name");
@@ -94,11 +61,11 @@
             const picture = document.getElementById("picname");
             const profile = document.getElementById("img");
             profile.style.backgroundImage = "url(" + picture.value + ")";
-            picture.value = "";  // Clear input after setting
+            picture.value = "";
         }
 
         function updateRow() {
-            count++;  // Increment count for the new row
+            count++;
             const name = document.getElementById("cellName").value;
             const phone = document.getElementById("cellNum").value;
 
@@ -106,10 +73,8 @@
             row.innerHTML = `<td>${count}</td><td>${name}</td><td>${phone}</td>`;
             document.getElementById("table").appendChild(row);
             
-            // Store data in phonenumber array
             phonenumber.push([count, name, phone]);
 
-            // Clear input fields
             document.getElementById("cellName").value = "";
             document.getElementById("cellNum").value = "";
         }
